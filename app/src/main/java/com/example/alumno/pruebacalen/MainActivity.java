@@ -81,36 +81,13 @@ public class MainActivity extends Activity {
                 .setBackOff(new ExponentialBackOff())
                 .setSelectedAccountName(settings.getString(PREF_ACCOUNT_NAME, null));*/
 
-      /*  LinearLayout layout=(LinearLayout)findViewById(R.id.textos);
-        LinearLayout.LayoutParams tlp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        TextView text=new TextView(this);
-        text.setLayoutParams(tlp);
-        layout.addView(text);
-
-        text.setText("EVENTO " + " a la hora " + "yyyy-MM-dd HH:mm");*/
-        /*
-        ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
-            @Override
-            public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
-                ArrayList <com.tyczj.extendedcalendarview.Event> array= day.getEvents();
-                for (com.tyczj.extendedcalendarview.Event even:array) {
-                    Log.d("asd", "El nombre es "+String.valueOf(even.getTitle())+" el id es "+String.valueOf(even.getEventId()));
-
-                }
-                
-            }
-        };
-        calendarView.setOnDayClickListener(day);*/
-
-        //TextView text=(TextView)findViewById(69);
-        //text.setText("PENE");
         MediCalendar calendar=new MediCalendar(this);
-       /* calendar.setTime(2016,3,1,10,10,2016,3,1,11,10);
+        calendar.setTime(2016,3,1,10,10,2016,3,1,11,10);
         calendar.addDate("pene", "sda", "asd");
         calendar.setTime(2016,3,1,13,10,2016,3,1,14,10);
         calendar.addDate("polla", "sasdda", "aadssd");
         calendar.setTime(2016,3,2,10,10,2016,3,2,11,10);
-        calendar.addDate("ostia", "sda", "asd");*/
+        calendar.addDate("ostia", "sda", "asd");
     }
 
 

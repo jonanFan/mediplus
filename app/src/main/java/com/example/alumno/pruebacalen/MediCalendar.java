@@ -78,7 +78,7 @@ public class MediCalendar {
                 for (com.tyczj.extendedcalendarview.Event even:array) {
                     textView=new TextView(context);
                     textView.setLayoutParams(params);
-                    textView.setText(even.getTitle()+": "+even.getDescription());
+                    textView.setText(even.getTitle() + ": " + even.getDescription() + "\n\tFECHA\n\t\t" + even.getStartDate("yyyy-MM-dd HH:mm")+" A "+even.getEndDate("yyyy-MM-dd HH:mm")+"\n"); //TODO CAMBIAR COMO SE VISUALIZAN LOS EVENTOS
                     linearLayout.addView(textView);
 
                 }
