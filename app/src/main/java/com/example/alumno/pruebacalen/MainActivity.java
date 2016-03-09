@@ -105,8 +105,12 @@ public class MainActivity extends Activity {
         //TextView text=(TextView)findViewById(69);
         //text.setText("PENE");
         MediCalendar calendar=new MediCalendar(this);
-        //calendar.setTime(2016,3,1,10,10,2016,3,1,11,10);
-        //calendar.addDate(calendarView, "pene", "sda", "asd");
+       /* calendar.setTime(2016,3,1,10,10,2016,3,1,11,10);
+        calendar.addDate("pene", "sda", "asd");
+        calendar.setTime(2016,3,1,13,10,2016,3,1,14,10);
+        calendar.addDate("polla", "sasdda", "aadssd");
+        calendar.setTime(2016,3,2,10,10,2016,3,2,11,10);
+        calendar.addDate("ostia", "sda", "asd");*/
     }
 
 

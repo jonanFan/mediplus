@@ -33,6 +33,7 @@ import java.util.concurrent.TimeUnit;
 public class MediCalendar {
 
     private Calendar cal;
+    private ExtendedCalendarView extendedCalendarView;
     private Context context;
     private int startYear, startMonth, startDay, startHour, startMinute;
     private int stopYear, stopMonth, stopDay, stopHour, stopMinute;
@@ -41,6 +42,7 @@ public class MediCalendar {
     {
         this.cal=Calendar.getInstance();
         this.context=context;
+        this.extendedCalendarView=new ExtendedCalendarView(context);
         init();
     }
 
@@ -62,9 +64,8 @@ public class MediCalendar {
     private void init(){
         restartTime();
 
-        ExtendedCalendarView calendarView=new ExtendedCalendarView(context);
         ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        ((Activity)context).addContentView(calendarView, params);
+        ((Activity)context).addContentView(extendedCalendarView, params);
         ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
             @Override
             public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
@@ -72,29 +73,19 @@ public class MediCalendar {
                 ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 ArrayList<Event> array= day.getEvents();
                 LinearLayout linearLayout=(LinearLayout)((Activity) context).findViewById(R.id.scroll);
+                linearLayout.removeAllViewsInLayout();
                 TextView textView=null;
                 for (com.tyczj.extendedcalendarview.Event even:array) {
                     textView=new TextView(context);
                     textView.setLayoutParams(params);
-
+                    textView.setText(even.getTitle()+": "+even.getDescription());
                     linearLayout.addView(textView);
+
                 }
 
             }
         };
-        calendarView.setOnDayClickListener(day);
-
-        params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        LinearLayout linearLayout=(LinearLayout)((Activity) context).findViewById(R.id.scroll);
-
-        TextView text=new TextView(context);
-        text.setLayoutParams(params);
-        for (int i=0; i<100;i++)
-        {
-            text=new TextView(context);
-            text.setText("Pene es"+i);
-            linearLayout.addView(text);
-        }
+        extendedCalendarView.setOnDayClickListener(day);
     }
 
     private void restartTime()
@@ -112,7 +103,7 @@ public class MediCalendar {
         this.stopMinute=-1;
     }
 
-    public void addDate(ExtendedCalendarView calendarView, String eventname, String description, String location)
+    public void addDate(String eventname, String description, String location)
     {
         try {
             if(startYear==-1)
@@ -137,7 +128,7 @@ public class MediCalendar {
             context.getContentResolver().insert(CalendarProvider.CONTENT_URI, values);
 
             restartTime();
-            calendarView.refreshCalendar();
+            extendedCalendarView.refreshCalendar();
 
         }
         catch (Exception ex)
