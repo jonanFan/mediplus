@@ -9,6 +9,9 @@ import com.tyczj.extendedcalendarview.CalendarProvider;
 import com.tyczj.extendedcalendarview.Event;
 import com.tyczj.extendedcalendarview.ExtendedCalendarView;
 
+import org.joda.time.DateTimeUtils;
+import org.joda.time.chrono.JulianChronology;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -99,16 +102,10 @@ public class MediCalendar {
 
     }
 
-    private int getJulianDay(long time)
+    private long getJulianDay(long time)
     {
-        GregorianCalendar date=(GregorianCalendar) GregorianCalendar.getInstance(TimeZone.getTimeZone("UTC"));
-        date.setTime(new Date(time));
-        date.set(Calendar.HOUR_OF_DAY, 0);
-        date.set(Calendar.MINUTE,0);
-        date.set(Calendar.SECOND, 0);
-        date.set(Calendar.MILLISECOND,0);
+        return DateTimeUtils.toJulianDayNumber(time);
 
-        return date.getActualMaximum(1);//ESTO FALLA
         //return Time.getJulianDay(time, TimeUnit.MILLISECONDS.toSeconds(timeZone.getOffset(time)));
     }
 
