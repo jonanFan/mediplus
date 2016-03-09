@@ -25,8 +25,7 @@ public class CalendarAdapter extends BaseAdapter{
 	Context context;
 	Calendar cal;
 	public String[] days;
-//	OnAddNewEventClick mAddEvent;
-	
+
 	ArrayList<Day> dayList = new ArrayList<Day>();
 	
 	public CalendarAdapter(Context context, Calendar cal){
@@ -190,7 +189,6 @@ public class CalendarAdapter extends BaseAdapter{
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         TimeZone tz = TimeZone.getDefault();
-		Log.d("asd", "Last day es "+lastDay+" first day es "+firstDay+" year es "+year+" month es"+month);
 
 		// figure size of the array
         if(firstDay==1){
@@ -199,13 +197,11 @@ public class CalendarAdapter extends BaseAdapter{
         else {
         	days = new String[lastDay+firstDay-(FIRST_DAY_OF_WEEK+1)];
         }
-        Log.d("asd", "Los dias son "+days.length);
         int j=FIRST_DAY_OF_WEEK;
         
         // populate empty days before first real day
         if(firstDay>1) {
 	        for(j=0;j<(firstDay-FIRST_DAY_OF_WEEK)+7;j++) {
-                Log.d("asd","Estamos en el de arriba: "+j);
 	        	days[j] = "";
 	        	Day d = new Day(context,0,0,0);
 	        	dayList.add(d);
@@ -216,7 +212,6 @@ public class CalendarAdapter extends BaseAdapter{
 			if(FIRST_DAY_OF_WEEK==1)
 				fin++;
 	    	for(j=0;j<(fin)+7;j++) {
-                Log.d("asd","Estamos en el de abajo: "+j);
                 days[j] = "";
 	        	Day d = new Day(context,0,0,0);
 	        	dayList.add(d);
@@ -232,7 +227,6 @@ public class CalendarAdapter extends BaseAdapter{
         	dayList.remove(j-1);
         }
 
-        Log.d("asd","J vale "+j);
         for(int i=j-1;i<days.length;i++) {
         	Day d = new Day(context,dayNumber,year,month);
         	
@@ -243,19 +237,10 @@ public class CalendarAdapter extends BaseAdapter{
         	d.setAdapter(this);
         	d.setStartDay(startDay);
 
-            //Log.d("asd", "La i es "+i+" y el dayNumber es "+dayNumber);
         	days[i] = ""+dayNumber;
         	dayNumber++;
         	dayList.add(d);
         }
-
-       Log.d("asd", "VISUALIZA DAYS");
-        for(int i=0; i < days.length; i++)
-           Log.d("asd","La i es "+i+" y el dia "+days[i]);
     }
-	
-//	public abstract static class OnAddNewEventClick{
-//		public abstract void onAddNewEventClick();
-//	}
 	
 }
