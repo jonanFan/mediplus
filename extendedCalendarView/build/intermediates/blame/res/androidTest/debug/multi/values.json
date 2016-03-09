@@ -11,7 +11,14 @@
                     "endOffset": 92
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 41,
+                        "endOffset": 92
+                    }
                 }
             },
             {
@@ -23,7 +30,14 @@
                     "endOffset": 140
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 97,
+                        "endColumn": 47,
+                        "endOffset": 140
+                    }
                 }
             },
             {
@@ -35,7 +49,14 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 145,
+                        "endColumn": 46,
+                        "endOffset": 187
+                    }
                 }
             },
             {
@@ -47,7 +68,14 @@
                     "endOffset": 233
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 192,
+                        "endColumn": 45,
+                        "endOffset": 233
+                    }
                 }
             },
             {
@@ -59,7 +87,14 @@
                     "endOffset": 282
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 238,
+                        "endColumn": 48,
+                        "endOffset": 282
+                    }
                 }
             },
             {
@@ -86,121 +121,288 @@
                     "startLine": 8,
                     "startColumn": 4,
                     "startOffset": 323,
-                    "endColumn": 57,
-                    "endOffset": 376
+                    "endColumn": 33,
+                    "endOffset": 352
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 323,
+                        "endColumn": 33,
+                        "endOffset": 352
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 381,
-                    "endColumn": 38,
-                    "endOffset": 415
+                    "startOffset": 357,
+                    "endColumn": 34,
+                    "endOffset": 387
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 357,
+                        "endColumn": 34,
+                        "endOffset": 387
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 420,
-                    "endColumn": 38,
-                    "endOffset": 454
+                    "startOffset": 392,
+                    "endColumn": 33,
+                    "endOffset": 421
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 392,
+                        "endColumn": 33,
+                        "endOffset": 421
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 459,
-                    "endColumn": 40,
-                    "endOffset": 495
+                    "startOffset": 426,
+                    "endColumn": 33,
+                    "endOffset": 455
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 426,
+                        "endColumn": 33,
+                        "endOffset": 455
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 500,
-                    "endColumn": 38,
-                    "endOffset": 534
+                    "startOffset": 460,
+                    "endColumn": 35,
+                    "endOffset": 491
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 460,
+                        "endColumn": 35,
+                        "endOffset": 491
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 539,
-                    "endColumn": 40,
-                    "endOffset": 575
+                    "startOffset": 496,
+                    "endColumn": 57,
+                    "endOffset": 549
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 496,
+                        "endColumn": 57,
+                        "endOffset": 549
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 580,
-                    "endColumn": 39,
-                    "endOffset": 615
+                    "startOffset": 554,
+                    "endColumn": 38,
+                    "endOffset": 588
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 554,
+                        "endColumn": 38,
+                        "endOffset": 588
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 620,
-                    "endColumn": 41,
-                    "endOffset": 657
+                    "startOffset": 593,
+                    "endColumn": 38,
+                    "endOffset": 627
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 593,
+                        "endColumn": 38,
+                        "endOffset": 627
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 662,
-                    "endLine": 22,
-                    "endColumn": 12,
-                    "endOffset": 948
+                    "startOffset": 632,
+                    "endColumn": 40,
+                    "endOffset": 668
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 632,
+                        "endColumn": 40,
+                        "endOffset": 668
+                    }
                 }
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 953,
-                    "endLine": 25,
-                    "endColumn": 12,
-                    "endOffset": 1108
+                    "startOffset": 673,
+                    "endColumn": 38,
+                    "endOffset": 707
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml"
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 673,
+                        "endColumn": 38,
+                        "endOffset": 707
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 712,
+                    "endColumn": 40,
+                    "endOffset": 748
+                },
+                "from": {
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 712,
+                        "endColumn": 40,
+                        "endOffset": 748
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 753,
+                    "endColumn": 39,
+                    "endOffset": 788
+                },
+                "from": {
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 753,
+                        "endColumn": 39,
+                        "endOffset": 788
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 793,
+                    "endColumn": 41,
+                    "endOffset": 830
+                },
+                "from": {
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 793,
+                        "endColumn": 41,
+                        "endOffset": 830
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 835,
+                    "endLine": 27,
+                    "endColumn": 12,
+                    "endOffset": 1121
+                },
+                "from": {
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 835,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 1121
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1126,
+                    "endLine": 30,
+                    "endColumn": 12,
+                    "endOffset": 1281
+                },
+                "from": {
+                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1126,
+                        "endLine": 30,
+                        "endColumn": 12,
+                        "endOffset": 1281
+                    }
                 }
             }
         ]

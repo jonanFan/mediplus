@@ -66,7 +66,7 @@ public class MediCalendar {
 
         ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         ((Activity)context).addContentView(extendedCalendarView, params);
-        ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
+        /*ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
             @Override
             public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
 
@@ -85,7 +85,7 @@ public class MediCalendar {
 
             }
         };
-        extendedCalendarView.setOnDayClickListener(day);
+        extendedCalendarView.setOnDayClickListener(day);*/
     }
 
     private void restartTime()

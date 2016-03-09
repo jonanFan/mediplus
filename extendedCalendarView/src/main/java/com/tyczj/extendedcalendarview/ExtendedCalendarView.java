@@ -17,9 +17,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
@@ -36,7 +34,6 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	private ImageView next,prev;
 	private int gestureType = 0;
 	private final GestureDetector calendarGesture = new GestureDetector(context,new GestureListener());
-    private final int setdp=325; //TODO ENERITZ HE MODIFICADO ESTO
 	
 	public static final int NO_GESTURE = 0;
 	public static final int LEFT_RIGHT_GESTURE = 1;
@@ -69,10 +66,10 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	private void init(){
 		cal = Calendar.getInstance();
 		base = new RelativeLayout(context);
-		base.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
+		base.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
 		base.setMinimumHeight(50);
 		
-		base.setId(R.id.base);
+		base.setId(4);
 		
 		LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 		params.leftMargin = 16;
@@ -80,7 +77,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 		params.addRule(RelativeLayout.CENTER_VERTICAL);
 		prev = new ImageView(context);
-		prev.setId(R.id.prev);
+		prev.setId(1);
 		prev.setLayoutParams(params);
 		prev.setImageResource(R.drawable.navigation_previous_item);
 		prev.setOnClickListener(this);
@@ -90,10 +87,10 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 		params.addRule(RelativeLayout.CENTER_VERTICAL);
 		month = new TextView(context);
-		month.setId(R.id.month);
+		month.setId(2);
 		month.setLayoutParams(params);
-		month.setTextAppearance(context, android.R.style.TextAppearance_DeviceDefault_Large); //android.R.attr.textAppearanceLarge
-		month.setText(cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()) + " " + cal.get(Calendar.YEAR));
+		month.setTextAppearance(context, android.R.attr.textAppearanceLarge);
+		month.setText(cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault())+" "+cal.get(Calendar.YEAR));
 		month.setTextSize(25);
 		
 		base.addView(month);
@@ -106,58 +103,38 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		next = new ImageView(context);
 		next.setImageResource(R.drawable.navigation_next_item);
 		next.setLayoutParams(params);
-		next.setId(R.id.next);
+		next.setId(3);
 		next.setOnClickListener(this);
 		
 		base.addView(next);
 		
 		addView(base);
 		
-		//params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-        final float scale = getContext().getResources().getDisplayMetrics().density;
-        int pixels = (int) (setdp * scale + 0.5f);
-		params = new LayoutParams(LayoutParams.WRAP_CONTENT,pixels);
+		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 		params.bottomMargin = 20;
 		params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-		//params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        params.addRule(RelativeLayout.BELOW, base.getId());
+		params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+		params.addRule(RelativeLayout.BELOW, base.getId());
 		
 		calendar = new GridView(context);
 		calendar.setLayoutParams(params);
 		calendar.setVerticalSpacing(4);
-        calendar.setHorizontalSpacing(4);
-        calendar.setNumColumns(7);
+		calendar.setHorizontalSpacing(4);
+		calendar.setNumColumns(7);
 		calendar.setChoiceMode(GridView.CHOICE_MODE_SINGLE);
 		calendar.setDrawSelectorOnTop(true);
-        calendar.setId(R.id.agenda);
-
-        mAdapter = new CalendarAdapter(context, cal);
-        calendar.setAdapter(mAdapter);
-        calendar.setOnTouchListener(new OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return calendarGesture.onTouchEvent(event);
-            }
-        });
+		
+		mAdapter = new CalendarAdapter(context,cal);
+		calendar.setAdapter(mAdapter);
+		calendar.setOnTouchListener(new OnTouchListener() {
+			
+	        @Override
+	        public boolean onTouch(View v, MotionEvent event) {
+	            return calendarGesture.onTouchEvent(event);
+	        }
+	    });
 		
 		addView(calendar);
-
-        params = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-        params.addRule(RelativeLayout.BELOW, calendar.getId());
-
-        ScrollView scrollView=new ScrollView(context);
-        scrollView.setLayoutParams(params);
-
-        LinearLayout linearLayout=new LinearLayout(context);
-        linearLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-
-        linearLayout.setId(R.id.scroll);
-        scrollView.addView(linearLayout);//TODO HACER QUE EL SCROLL SE QUEDE ARRIBA
-        addView(scrollView);
-
 	}
 
 	private class GestureListener extends SimpleOnGestureListener {
@@ -251,10 +228,8 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	 * Refreshes the month
 	 */
 	public void refreshCalendar(){
-		mAdapter = new CalendarAdapter(context, cal);
 		mAdapter.refreshDays();
 		mAdapter.notifyDataSetChanged();
-		calendar.setAdapter(mAdapter);
 	}
 	
 	/**

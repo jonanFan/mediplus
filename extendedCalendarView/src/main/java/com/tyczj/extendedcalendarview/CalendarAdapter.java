@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 import android.content.Context;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +19,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class CalendarAdapter extends BaseAdapter{
-
-	static final int FIRST_DAY_OF_WEEK =1; //ESTABA A 0
+	
+	static final int FIRST_DAY_OF_WEEK =0;
 	Context context;
 	Calendar cal;
 	public String[] days;
-
+//	OnAddNewEventClick mAddEvent;
+	
 	ArrayList<Day> dayList = new ArrayList<Day>();
 	
 	public CalendarAdapter(Context context, Calendar cal){
@@ -52,12 +52,13 @@ public class CalendarAdapter extends BaseAdapter{
 	
 	public int getPrevMonth(){
 		if(cal.get(Calendar.MONTH) == cal.getActualMinimum(Calendar.MONTH)){
-			cal.set(Calendar.YEAR, cal.get( Calendar.YEAR-1));
+			cal.set(Calendar.YEAR, cal.get(Calendar.YEAR-1));
+		}else{
+			
 		}
-
 		int month = cal.get(Calendar.MONTH);
 		if(month == 0){
-			return 11;
+			return month = 11;
 		}
 		
 		return month-1;
@@ -76,22 +77,22 @@ public class CalendarAdapter extends BaseAdapter{
 			TextView day = (TextView)v.findViewById(R.id.textView1);
 			
 			if(position == 0){
-				day.setText(R.string.monday);
-			}else if(position == 1){
-				day.setText(R.string.tuesday);
-			}else if(position == 2){
-				day.setText(R.string.wednesday);
-			}else if(position == 3){
-				day.setText(R.string.thursday);
-			}else if(position == 4){
-				day.setText(R.string.friday);
-			}else if(position == 5){
-				day.setText(R.string.saturday);
-			}else if(position == 6){
 				day.setText(R.string.sunday);
+			}else if(position == 1){
+				day.setText(R.string.monday);
+			}else if(position == 2){
+				day.setText(R.string.tuesday);
+			}else if(position == 3){
+				day.setText(R.string.wednesday);
+			}else if(position == 4){
+				day.setText(R.string.thursday);
+			}else if(position == 5){
+				day.setText(R.string.friday);
+			}else if(position == 6){
+				day.setText(R.string.saturday);
 			}
-
-        }else{
+			
+		}else{
 			
 	        v = vi.inflate(R.layout.day_view, null);
 			FrameLayout today = (FrameLayout)v.findViewById(R.id.today_frame);
@@ -176,9 +177,7 @@ public class CalendarAdapter extends BaseAdapter{
 		
 		return v;
 	}
-	//TODO MIRAR ESTO PORQUE FALLA MAYO -> OJO PATADA FALLA AL CAMBIAR QUE HAGA EL CALCULO EN FORMATO ESPAÑOL
-    //TODO MAYO deberia tener 12 vacios delante y un total de 43
-
+	
 	public void refreshDays()
     {
     	// clear items
@@ -189,14 +188,15 @@ public class CalendarAdapter extends BaseAdapter{
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         TimeZone tz = TimeZone.getDefault();
-
-		// figure size of the array
+        
+        // figure size of the array
         if(firstDay==1){
         	days = new String[lastDay+(FIRST_DAY_OF_WEEK*6)];
         }
         else {
         	days = new String[lastDay+firstDay-(FIRST_DAY_OF_WEEK+1)];
         }
+        
         int j=FIRST_DAY_OF_WEEK;
         
         // populate empty days before first real day
@@ -208,25 +208,21 @@ public class CalendarAdapter extends BaseAdapter{
 	        }
         }
 	    else {
-			int fin=FIRST_DAY_OF_WEEK*6; //TODO POSIBLE APAÑO PARA EL TOPE DE ARRIBA
-			if(FIRST_DAY_OF_WEEK==1)
-				fin++;
-	    	for(j=0;j<(fin)+7;j++) {
-                days[j] = "";
+	    	for(j=0;j<(FIRST_DAY_OF_WEEK*6)+7;j++) {
+	        	days[j] = "";
 	        	Day d = new Day(context,0,0,0);
 	        	dayList.add(d);
 	        }
-	    	if(FIRST_DAY_OF_WEEK==0)
-				j=FIRST_DAY_OF_WEEK*6+1; // sunday => 1, monday => 7
-        }
+	    	j=FIRST_DAY_OF_WEEK*6+1; // sunday => 1, monday => 7
+	    }
         
         // populate days
         int dayNumber = 1;
-
+        
         if(j>0 && dayList.size() > 0 && j != 1){
         	dayList.remove(j-1);
         }
-
+        
         for(int i=j-1;i<days.length;i++) {
         	Day d = new Day(context,dayNumber,year,month);
         	
@@ -236,11 +232,15 @@ public class CalendarAdapter extends BaseAdapter{
         	
         	d.setAdapter(this);
         	d.setStartDay(startDay);
-
+        	
         	days[i] = ""+dayNumber;
         	dayNumber++;
         	dayList.add(d);
         }
     }
+	
+//	public abstract static class OnAddNewEventClick{
+//		public abstract void onAddNewEventClick();
+//	}
 	
 }
