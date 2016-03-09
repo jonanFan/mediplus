@@ -155,7 +155,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         linearLayout.setId(R.id.scroll);
-        scrollView.addView(linearLayout);
+        scrollView.addView(linearLayout);//TODO HACER QUE EL SCROLL SE QUEDE ARRIBA
         addView(scrollView);
 
 	}
