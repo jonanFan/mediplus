@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import android.content.Context;
 import android.text.format.Time;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class CalendarAdapter extends BaseAdapter{
-	
+
 	static final int FIRST_DAY_OF_WEEK =1; //ESTABA A 0
 	Context context;
 	Calendar cal;
@@ -53,12 +54,11 @@ public class CalendarAdapter extends BaseAdapter{
 	public int getPrevMonth(){
 		if(cal.get(Calendar.MONTH) == cal.getActualMinimum(Calendar.MONTH)){
 			cal.set(Calendar.YEAR, cal.get( Calendar.YEAR-1));
-		}else{
-			
 		}
+
 		int month = cal.get(Calendar.MONTH);
 		if(month == 0){
-			return month = 11;
+			return 11;
 		}
 		
 		return month-1;
@@ -91,8 +91,8 @@ public class CalendarAdapter extends BaseAdapter{
 			}else if(position == 6){
 				day.setText(R.string.sunday);
 			}
-			
-		}else{
+
+        }else{
 			
 	        v = vi.inflate(R.layout.day_view, null);
 			FrameLayout today = (FrameLayout)v.findViewById(R.id.today_frame);
@@ -177,7 +177,9 @@ public class CalendarAdapter extends BaseAdapter{
 		
 		return v;
 	}
-	
+	//TODO MIRAR ESTO PORQUE FALLA MAYO -> OJO PATADA FALLA AL CAMBIAR QUE HAGA EL CALCULO EN FORMATO ESPAÑOL
+    //TODO MAYO deberia tener 12 vacios delante y un total de 43
+
 	public void refreshDays()
     {
     	// clear items
@@ -188,41 +190,49 @@ public class CalendarAdapter extends BaseAdapter{
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         TimeZone tz = TimeZone.getDefault();
-        
-        // figure size of the array
+		Log.d("asd", "Last day es "+lastDay+" first day es "+firstDay+" year es "+year+" month es"+month);
+
+		// figure size of the array
         if(firstDay==1){
         	days = new String[lastDay+(FIRST_DAY_OF_WEEK*6)];
         }
         else {
         	days = new String[lastDay+firstDay-(FIRST_DAY_OF_WEEK+1)];
         }
-        
+        Log.d("asd", "Los dias son "+days.length);
         int j=FIRST_DAY_OF_WEEK;
         
         // populate empty days before first real day
         if(firstDay>1) {
 	        for(j=0;j<(firstDay-FIRST_DAY_OF_WEEK)+7;j++) {
+                Log.d("asd","Estamos en el de arriba: "+j);
 	        	days[j] = "";
 	        	Day d = new Day(context,0,0,0);
 	        	dayList.add(d);
 	        }
         }
 	    else {
-	    	for(j=0;j<(FIRST_DAY_OF_WEEK*6)+7;j++) {
-	        	days[j] = "";
+			int fin=FIRST_DAY_OF_WEEK*6; //TODO POSIBLE APAÑO PARA EL TOPE DE ARRIBA
+			if(FIRST_DAY_OF_WEEK==1)
+				fin++;
+	    	for(j=0;j<(fin)+7;j++) {
+                Log.d("asd","Estamos en el de abajo: "+j);
+                days[j] = "";
 	        	Day d = new Day(context,0,0,0);
 	        	dayList.add(d);
 	        }
-	    	j=FIRST_DAY_OF_WEEK*6+1; // sunday => 1, monday => 7
-	    }
+	    	if(FIRST_DAY_OF_WEEK==0)
+				j=FIRST_DAY_OF_WEEK*6+1; // sunday => 1, monday => 7
+        }
         
         // populate days
         int dayNumber = 1;
-        
+
         if(j>0 && dayList.size() > 0 && j != 1){
         	dayList.remove(j-1);
         }
-        
+
+        Log.d("asd","J vale "+j);
         for(int i=j-1;i<days.length;i++) {
         	Day d = new Day(context,dayNumber,year,month);
         	
@@ -232,11 +242,16 @@ public class CalendarAdapter extends BaseAdapter{
         	
         	d.setAdapter(this);
         	d.setStartDay(startDay);
-        	
+
+            //Log.d("asd", "La i es "+i+" y el dayNumber es "+dayNumber);
         	days[i] = ""+dayNumber;
         	dayNumber++;
         	dayList.add(d);
         }
+
+       Log.d("asd", "VISUALIZA DAYS");
+        for(int i=0; i < days.length; i++)
+           Log.d("asd","La i es "+i+" y el dia "+days[i]);
     }
 	
 //	public abstract static class OnAddNewEventClick{
