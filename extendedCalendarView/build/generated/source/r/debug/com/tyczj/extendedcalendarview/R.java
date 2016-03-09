@@ -11,7 +11,7 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static int date_number_text_color=0x7f070000;
+        public static int date_number_text_color=0x7f080000;
     }
     public static final class dimen {
         public static int day_margin=0x7f040000;
@@ -37,29 +37,30 @@ public final class R {
         public static int today=0x7f02000d;
     }
     public static final class id {
-        public static int imageView1=0x7f080003;
-        public static int imageView2=0x7f080005;
-        public static int imageView3=0x7f080006;
-        public static int imageView4=0x7f080004;
-        public static int imageView5=0x7f080007;
-        public static int imageView6=0x7f080008;
-        public static int rl=0x7f080001;
-        public static int textView1=0x7f080000;
-        public static int today_frame=0x7f080002;
+        public static int imageView1=0x7f060004;
+        public static int imageView2=0x7f060006;
+        public static int imageView3=0x7f060007;
+        public static int imageView4=0x7f060005;
+        public static int imageView5=0x7f060008;
+        public static int imageView6=0x7f060009;
+        public static int rl=0x7f060002;
+        public static int scroll=0x7f060000;
+        public static int textView1=0x7f060001;
+        public static int today_frame=0x7f060003;
     }
     public static final class layout {
         public static int day_of_week=0x7f030000;
         public static int day_view=0x7f030001;
     }
     public static final class string {
-        public static int app_name=0x7f060000;
-        public static int friday=0x7f060001;
-        public static int monday=0x7f060002;
-        public static int saturday=0x7f060003;
-        public static int sunday=0x7f060004;
-        public static int thursday=0x7f060005;
-        public static int tuesday=0x7f060006;
-        public static int wednesday=0x7f060007;
+        public static int app_name=0x7f070000;
+        public static int friday=0x7f070001;
+        public static int monday=0x7f070002;
+        public static int saturday=0x7f070003;
+        public static int sunday=0x7f070004;
+        public static int thursday=0x7f070005;
+        public static int tuesday=0x7f070006;
+        public static int wednesday=0x7f070007;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

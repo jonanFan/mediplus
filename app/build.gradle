@@ -31,4 +31,5 @@ dependencies {
     }
     compile project(':extendedCalendarView')
     compile 'joda-time:joda-time:2.9.2'
+    compile 'com.android.support:design:23.1.1'
 }

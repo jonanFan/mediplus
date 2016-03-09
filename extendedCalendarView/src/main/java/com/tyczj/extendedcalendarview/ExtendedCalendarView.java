@@ -72,7 +72,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		base.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 		base.setMinimumHeight(50);
 		
-		base.setId(4);
+		base.setId(R.id.base);
 		
 		LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 		params.leftMargin = 16;
@@ -80,7 +80,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 		params.addRule(RelativeLayout.CENTER_VERTICAL);
 		prev = new ImageView(context);
-		prev.setId(1);
+		prev.setId(R.id.prev);
 		prev.setLayoutParams(params);
 		prev.setImageResource(R.drawable.navigation_previous_item);
 		prev.setOnClickListener(this);
@@ -90,9 +90,9 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		params.addRule(RelativeLayout.CENTER_HORIZONTAL);
 		params.addRule(RelativeLayout.CENTER_VERTICAL);
 		month = new TextView(context);
-		month.setId(2);
+		month.setId(R.id.month);
 		month.setLayoutParams(params);
-		month.setTextAppearance(context, android.R.attr.textAppearanceLarge);
+		month.setTextAppearance(context, android.R.style.TextAppearance_DeviceDefault_Large); //android.R.attr.textAppearanceLarge
 		month.setText(cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()) + " " + cal.get(Calendar.YEAR));
 		month.setTextSize(25);
 		
@@ -106,7 +106,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		next = new ImageView(context);
 		next.setImageResource(R.drawable.navigation_next_item);
 		next.setLayoutParams(params);
-		next.setId(3);
+		next.setId(R.id.next);
 		next.setOnClickListener(this);
 		
 		base.addView(next);
@@ -129,7 +129,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
         calendar.setNumColumns(7);
 		calendar.setChoiceMode(GridView.CHOICE_MODE_SINGLE);
 		calendar.setDrawSelectorOnTop(true);
-        calendar.setId(22);
+        calendar.setId(R.id.agenda);
 
         mAdapter = new CalendarAdapter(context, cal);
         calendar.setAdapter(mAdapter);
