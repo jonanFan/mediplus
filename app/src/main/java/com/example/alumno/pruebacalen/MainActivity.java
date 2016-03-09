@@ -44,6 +44,8 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.io.IOException;
 import java.util.*;
 import java.util.Calendar;
@@ -72,7 +74,6 @@ public class MainActivity extends Activity {
 
        // mProgress = new ProgressDialog(this);
        // mProgress.setMessage("Conectando ...");
-
         // Initialize credentials and service object.
       /*  SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
         mCredential = GoogleAccountCredential.usingOAuth2(
@@ -80,7 +81,6 @@ public class MainActivity extends Activity {
                 .setBackOff(new ExponentialBackOff())
                 .setSelectedAccountName(settings.getString(PREF_ACCOUNT_NAME, null));*/
 
-        ExtendedCalendarView calendarView=(ExtendedCalendarView)findViewById(R.id.calendar);
       /*  LinearLayout layout=(LinearLayout)findViewById(R.id.textos);
         LinearLayout.LayoutParams tlp=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         TextView text=new TextView(this);
@@ -88,7 +88,6 @@ public class MainActivity extends Activity {
         layout.addView(text);
 
         text.setText("EVENTO " + " a la hora " + "yyyy-MM-dd HH:mm");*/
-
         /*
         ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
             @Override
@@ -103,7 +102,9 @@ public class MainActivity extends Activity {
         };
         calendarView.setOnDayClickListener(day);*/
 
-        //MediCalendar calendar=new MediCalendar(this);
+        //TextView text=(TextView)findViewById(69);
+        //text.setText("PENE");
+        MediCalendar calendar=new MediCalendar(this,R.id.pene);
         //calendar.setTime(2016,3,1,10,10,2016,3,1,11,10);
         //calendar.addDate(calendarView, "pene", "sda", "asd");
     }

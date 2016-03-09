@@ -1,17 +1,25 @@
 package com.example.alumno.pruebacalen;
 
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.text.Layout;
 import android.text.format.Time;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.TextView;
 
 import com.tyczj.extendedcalendarview.CalendarProvider;
+import com.tyczj.extendedcalendarview.Day;
 import com.tyczj.extendedcalendarview.Event;
 import com.tyczj.extendedcalendarview.ExtendedCalendarView;
 
 import org.joda.time.DateTimeUtils;
 import org.joda.time.chrono.JulianChronology;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -24,17 +32,17 @@ import java.util.concurrent.TimeUnit;
 public class MediCalendar {
 
     private Calendar cal;
-    //private TimeZone timeZone;
     private Context context;
     private int startYear, startMonth, startDay, startHour, startMinute;
     private int stopYear, stopMonth, stopDay, stopHour, stopMinute;
+    private int parentid;
 
-    public MediCalendar(Context context)
+    public MediCalendar(Context context, int id)
     {
         this.cal=Calendar.getInstance();
-      //  this.timeZone=TimeZone.getDefault();
         this.context=context;
-        restartTime();
+        this.parentid=id;
+        init();
     }
 
     public void setTime(int startYear, int startMonth, int startDay, int startHour, int startMinute, int stopYear, int stopMonth, int stopDay, int stopHour, int stopMinute)
@@ -52,7 +60,28 @@ public class MediCalendar {
         this.stopMinute=stopMinute;
     }
 
-    public void restartTime()
+    private void init(){
+        restartTime();
+
+        ExtendedCalendarView calendarView=new ExtendedCalendarView(context);
+        ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        ((Activity)context).addContentView(calendarView, params);
+        ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
+            @Override
+            public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
+                ArrayList<Event> array= day.getEvents();
+                for (com.tyczj.extendedcalendarview.Event even:array) {
+
+                }
+
+            }
+        };
+        calendarView.setOnDayClickListener(day);
+        TextView text=(TextView)((Activity) context).findViewById(R.id.scroll);
+        text.setText("PENE");
+    }
+
+    private void restartTime()
     {
         this.startYear=-1;
         this.startMonth=-1;

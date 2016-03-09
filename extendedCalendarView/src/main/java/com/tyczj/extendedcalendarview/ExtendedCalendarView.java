@@ -145,7 +145,9 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
         params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         params.addRule(RelativeLayout.BELOW, calendar.getId());
 		TextView texto=new TextView(context);
+
 		texto.setLayoutParams(params);
+		texto.setId(R.id.scroll);
 		addView(texto);
 
 		texto.setText("EVENTO " + " a la hora " + "yyyy-MM-dd HH:mm");//TODO MODIFICAR ESTO
