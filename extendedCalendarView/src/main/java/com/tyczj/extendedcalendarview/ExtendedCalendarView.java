@@ -143,7 +143,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		
 		addView(calendar);
 
-        params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+        params = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
         params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         params.addRule(RelativeLayout.BELOW, calendar.getId());
 

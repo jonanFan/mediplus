@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.tyczj.extendedcalendarview.CalendarProvider;
@@ -35,13 +36,11 @@ public class MediCalendar {
     private Context context;
     private int startYear, startMonth, startDay, startHour, startMinute;
     private int stopYear, stopMonth, stopDay, stopHour, stopMinute;
-    private int parentid;
 
-    public MediCalendar(Context context, int id)
+    public MediCalendar(Context context)
     {
         this.cal=Calendar.getInstance();
         this.context=context;
-        this.parentid=id;
         init();
     }
 
@@ -69,16 +68,33 @@ public class MediCalendar {
         ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
             @Override
             public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
-                ArrayList<Event> array= day.getEvents();
-                for (com.tyczj.extendedcalendarview.Event even:array) {
 
+                ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                ArrayList<Event> array= day.getEvents();
+                LinearLayout linearLayout=(LinearLayout)((Activity) context).findViewById(R.id.scroll);
+                TextView textView=null;
+                for (com.tyczj.extendedcalendarview.Event even:array) {
+                    textView=new TextView(context);
+                    textView.setLayoutParams(params);
+
+                    linearLayout.addView(textView);
                 }
 
             }
         };
         calendarView.setOnDayClickListener(day);
-        TextView text=(TextView)((Activity) context).findViewById(R.id.scroll);
-        text.setText("PENE");
+
+        params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        LinearLayout linearLayout=(LinearLayout)((Activity) context).findViewById(R.id.scroll);
+
+        TextView text=new TextView(context);
+        text.setLayoutParams(params);
+        for (int i=0; i<100;i++)
+        {
+            text=new TextView(context);
+            text.setText("Pene es"+i);
+            linearLayout.addView(text);
+        }
     }
 
     private void restartTime()

@@ -104,7 +104,7 @@ public class MainActivity extends Activity {
 
         //TextView text=(TextView)findViewById(69);
         //text.setText("PENE");
-        MediCalendar calendar=new MediCalendar(this,R.id.pene);
+        MediCalendar calendar=new MediCalendar(this);
         //calendar.setTime(2016,3,1,10,10,2016,3,1,11,10);
         //calendar.addDate(calendarView, "pene", "sda", "asd");
     }
