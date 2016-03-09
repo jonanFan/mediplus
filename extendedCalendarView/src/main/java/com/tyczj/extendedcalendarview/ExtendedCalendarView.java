@@ -34,7 +34,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	private ImageView next,prev;
 	private int gestureType = 0;
 	private final GestureDetector calendarGesture = new GestureDetector(context,new GestureListener());
-    private final int setdp=280; //TODO ENERITZ HE MODIFICADO ESTO
+    private final int setdp=325; //TODO ENERITZ HE MODIFICADO ESTO
 	
 	public static final int NO_GESTURE = 0;
 	public static final int LEFT_RIGHT_GESTURE = 1;
