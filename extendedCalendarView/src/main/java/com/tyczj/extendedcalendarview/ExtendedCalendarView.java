@@ -17,7 +17,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
@@ -144,13 +146,18 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
         params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
         params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         params.addRule(RelativeLayout.BELOW, calendar.getId());
-		TextView texto=new TextView(context);
 
-		texto.setLayoutParams(params);
-		texto.setId(R.id.scroll);
-		addView(texto);
+        ScrollView scrollView=new ScrollView(context);
+        scrollView.setLayoutParams(params);
 
-		texto.setText("EVENTO " + " a la hora " + "yyyy-MM-dd HH:mm");//TODO MODIFICAR ESTO
+        LinearLayout linearLayout=new LinearLayout(context);
+        linearLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        linearLayout.setId(R.id.scroll);
+        scrollView.addView(linearLayout);
+        addView(scrollView);
+
 	}
 
 	private class GestureListener extends SimpleOnGestureListener {
