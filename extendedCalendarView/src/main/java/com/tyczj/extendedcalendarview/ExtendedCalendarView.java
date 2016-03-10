@@ -8,6 +8,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
@@ -133,12 +134,12 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		mAdapter = new CalendarAdapter(context,cal);
 		calendar.setAdapter(mAdapter);
 		calendar.setOnTouchListener(new OnTouchListener() {
-			
-	        @Override
-	        public boolean onTouch(View v, MotionEvent event) {
-	            return calendarGesture.onTouchEvent(event);
-	        }
-	    });
+
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				return calendarGesture.onTouchEvent(event);
+			}
+		});
 		
 		addView(calendar);
 
@@ -150,12 +151,29 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		scrollView.setLayoutParams(params);
 
 		linearLayout=new LinearLayout(context);
-		linearLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+		linearLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		linearLayout.setOrientation(LinearLayout.VERTICAL);
 
 		linearLayout.setId(R.id.scroll);
 		scrollView.addView(linearLayout);//TODO HACER QUE EL SCROLL SE QUEDE ARRIBA
 		addView(scrollView);
+
+		RelativeLayout relativeLayout=new RelativeLayout(context);
+		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+		params.topMargin = getpixels(dps-10);
+		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+		relativeLayout.setLayoutParams(params);
+
+		FloatingActionButton floatingActionButton=new FloatingActionButton(context);
+		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+		floatingActionButton.setLayoutParams(params);
+		floatingActionButton.setClickable(true);
+		floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.plus,context.getTheme()));
+
+		relativeLayout.addView(floatingActionButton);
+
+		addView(relativeLayout);
+
 	}
 
 	private int getpixels(int dp)
