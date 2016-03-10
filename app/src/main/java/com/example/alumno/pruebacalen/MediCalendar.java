@@ -66,14 +66,15 @@ public class MediCalendar {
 
         ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         ((Activity)context).addContentView(extendedCalendarView, params);
-        /*ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
+        ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
             @Override
             public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
 
                 ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 ArrayList<Event> array= day.getEvents();
                 LinearLayout linearLayout=(LinearLayout)((Activity) context).findViewById(R.id.scroll);
-                linearLayout.removeAllViewsInLayout();
+                Log.d("asd","ENTRA");
+                linearLayout.removeAllViews();
                 TextView textView=null;
                 for (com.tyczj.extendedcalendarview.Event even:array) {
                     textView=new TextView(context);
@@ -85,7 +86,7 @@ public class MediCalendar {
 
             }
         };
-        extendedCalendarView.setOnDayClickListener(day);*/
+        extendedCalendarView.setOnDayClickListener(day);
     }
 
     private void restartTime()

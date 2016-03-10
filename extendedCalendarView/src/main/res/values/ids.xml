@@ -5,5 +5,5 @@
     <item name="base" type="id"/>
     <item name="month" type="id"/>
     <item name="scroll" type="id"/>
-    <item name="agenda" type="id"/>
+    <item name="calendario" type="id"/>
 </resources>

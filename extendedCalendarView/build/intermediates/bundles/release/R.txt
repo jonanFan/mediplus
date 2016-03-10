@@ -18,8 +18,8 @@ int drawable purple 0x7f02000a
 int drawable quickcontact_badge_overlay_normal_light 0x7f02000b
 int drawable red 0x7f02000c
 int drawable today 0x7f02000d
-int id agenda 0x7f060000
-int id base 0x7f060001
+int id base 0x7f060000
+int id calendario 0x7f060001
 int id imageView1 0x7f060009
 int id imageView2 0x7f06000b
 int id imageView3 0x7f06000c

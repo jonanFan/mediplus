@@ -37,8 +37,8 @@ public final class R {
         public static int today=0x7f02000d;
     }
     public static final class id {
-        public static int agenda=0x7f060000;
-        public static int base=0x7f060001;
+        public static int base=0x7f060000;
+        public static int calendario=0x7f060001;
         public static int imageView1=0x7f060009;
         public static int imageView2=0x7f06000b;
         public static int imageView3=0x7f06000c;
