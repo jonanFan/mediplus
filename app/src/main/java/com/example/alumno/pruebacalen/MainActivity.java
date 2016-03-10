@@ -105,8 +105,8 @@ public class MainActivity extends Activity {
         } else {
             mOutputText.setText("Google Play Services required: " +
                     "after installing, close and relaunch this app.");
-        }*/
-    }
+        }
+    }*/
 
     /**
      * Called when an activity launched here (specifically, AccountPicker
@@ -326,5 +326,5 @@ public class MainActivity extends Activity {
                 mOutputText.setText("Request cancelled.");
             }
         }
-    }
-}*/
+    }*/
+}
