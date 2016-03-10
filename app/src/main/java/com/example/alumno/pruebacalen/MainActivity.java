@@ -91,14 +91,16 @@ public class MainActivity extends Activity {
     }
 
 
+    //TODO OLVIDAR TODO LO QUE HAY DE AQUI A ABAJO
+
     /**
      * Called whenever this activity is pushed to the foreground, such as after
      * a call to onCreate().
      */
-    @Override
+  /*  @Override
     protected void onResume() {
         super.onResume();
-      /*  if (isGooglePlayServicesAvailable()) {
+       if (isGooglePlayServicesAvailable()) {
             refreshResults();
         } else {
             mOutputText.setText("Google Play Services required: " +
@@ -116,11 +118,11 @@ public class MainActivity extends Activity {
      * @param data Intent (containing result data) returned by incoming
      *     activity result.
      */
-    @Override
+   /* @Override
     protected void onActivityResult(
             int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        /*switch(requestCode) {
+        switch(requestCode) {
             case REQUEST_GOOGLE_PLAY_SERVICES:
                 if (resultCode != RESULT_OK) {
                     isGooglePlayServicesAvailable();
@@ -150,8 +152,8 @@ public class MainActivity extends Activity {
                 break;
         }
 
-        super.onActivityResult(requestCode, resultCode, data);*/
-    }
+        super.onActivityResult(requestCode, resultCode, data);
+    }*/
 
     /**
      * Attempt to get a set of data from the Google Calendar API to display. If the
@@ -324,5 +326,5 @@ public class MainActivity extends Activity {
                 mOutputText.setText("Request cancelled.");
             }
         }
-    }*/
-}
+    }
+}*/
