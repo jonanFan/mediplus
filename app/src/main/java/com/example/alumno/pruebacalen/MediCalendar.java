@@ -73,7 +73,6 @@ public class MediCalendar {
                 ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 ArrayList<Event> array= day.getEvents();
                 LinearLayout linearLayout=(LinearLayout)((Activity) context).findViewById(R.id.scroll);
-                Log.d("asd","ENTRA");
                 linearLayout.removeAllViews();
                 TextView textView=null;
                 for (com.tyczj.extendedcalendarview.Event even:array) {

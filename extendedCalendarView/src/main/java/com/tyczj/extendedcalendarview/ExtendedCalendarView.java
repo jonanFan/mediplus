@@ -33,6 +33,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	private Calendar cal;
 	private TextView month;
 	private RelativeLayout base;
+	private LinearLayout linearLayout;
 	private ImageView next,prev;
 	private int gestureType = 0, dps=325; //TODO AÑADIDO PARA QUE ENTRE TODO EN LA PANTALLA
 	private final GestureDetector calendarGesture = new GestureDetector(context,new GestureListener());
@@ -94,7 +95,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		month.setId(2);
 		month.setLayoutParams(params);
 		month.setTextAppearance(context, android.R.attr.textAppearanceLarge);
-		month.setText(cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault())+" "+cal.get(Calendar.YEAR));
+		month.setText(cal.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()) + " " + cal.get(Calendar.YEAR));
 		month.setTextSize(25);
 		
 		base.addView(month);
@@ -148,7 +149,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		ScrollView scrollView=new ScrollView(context);
 		scrollView.setLayoutParams(params);
 
-		LinearLayout linearLayout=new LinearLayout(context);
+		linearLayout=new LinearLayout(context);
 		linearLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		linearLayout.setOrientation(LinearLayout.VERTICAL);
 
@@ -254,6 +255,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	 * Refreshes the month
 	 */
 	public void refreshCalendar(){
+		linearLayout.removeAllViews();
 		mAdapter.refreshDays();
 		mAdapter.notifyDataSetChanged();
 		mAdapter = new CalendarAdapter(context,cal);
