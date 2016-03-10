@@ -3,6 +3,7 @@ package com.example.alumno.pruebacalen;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.support.design.widget.FloatingActionButton;
 import android.text.Layout;
 import android.text.format.Time;
 import android.util.Log;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.tyczj.extendedcalendarview.CalendarProvider;
@@ -64,8 +67,31 @@ public class MediCalendar {
     private void init(){
         restartTime();
 
-        ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        //RelativeLayout.LayoutParams params=new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+       // ((Activity)context).addContentView(extendedCalendarView, params);
+
+
+        FloatingActionButton floatingActionButton=new FloatingActionButton(context);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+        params.topMargin = getpixels(extendedCalendarView.getDps()-10);
+        params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        floatingActionButton.setLayoutParams(params);
+        floatingActionButton.setClickable(true);
+        floatingActionButton.setImageDrawable(context.getResources().getDrawable(R.drawable.plus, context.getTheme()));
+        floatingActionButton.setBackgroundTintList(context.getResources().getColorStateList(R.color.azul));
+        extendedCalendarView.addView(floatingActionButton);
+
+        params=new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         ((Activity)context).addContentView(extendedCalendarView, params);
+
+
+
+
+
+
+
+
+
         ExtendedCalendarView.OnDayClickListener day=new ExtendedCalendarView.OnDayClickListener() {
             @Override
             public void onDayClicked(AdapterView<?> adapter, View view, int position, long id, Day day) {
@@ -89,6 +115,12 @@ public class MediCalendar {
             }
         };
         extendedCalendarView.setOnDayClickListener(day);
+    }
+
+    private int getpixels(int dp)
+    {
+        float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
     }
 
     private void restartTime()

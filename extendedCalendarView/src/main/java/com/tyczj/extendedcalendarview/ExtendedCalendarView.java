@@ -8,7 +8,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.design.widget.FloatingActionButton;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
@@ -127,7 +126,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		calendar.setVerticalSpacing(4);
 		calendar.setHorizontalSpacing(4);
 		calendar.setNumColumns(7);
-		calendar.setId(R.id.calendario);
+		calendar.setId(69);
 		calendar.setChoiceMode(GridView.CHOICE_MODE_SINGLE);
 		calendar.setDrawSelectorOnTop(true);
 		
@@ -158,7 +157,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		scrollView.addView(linearLayout);//TODO HACER QUE EL SCROLL SE QUEDE ARRIBA
 		addView(scrollView);
 
-		RelativeLayout relativeLayout=new RelativeLayout(context);
+		/*RelativeLayout relativeLayout=new RelativeLayout(context);
 		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 		params.topMargin = getpixels(dps-10);
 		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
@@ -172,7 +171,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		floatingActionButton.setBackgroundTintList(getResources().getColorStateList(R.color.azul));
 		relativeLayout.addView(floatingActionButton);
 
-		addView(relativeLayout);
+		addView(relativeLayout);*/
 
 	}
 
@@ -255,7 +254,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	
 	private void nextMonth(){
 		if(cal.get(Calendar.MONTH) == cal.getActualMaximum(Calendar.MONTH)) {				
-			cal.set((cal.get(Calendar.YEAR)+1),cal.getActualMinimum(Calendar.MONTH),1);
+			cal.set((cal.get(Calendar.YEAR)+1), cal.getActualMinimum(Calendar.MONTH),1);
 		} else {
 			cal.set(Calendar.MONTH,cal.get(Calendar.MONTH)+1);
 		}
@@ -384,6 +383,14 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 	 */
 	public void setGesture(int gestureType){
 		this.gestureType = gestureType;
+	}
+
+	public void setDps(int dps){
+		this.dps=dps;
+	}
+
+	public int getDps(){
+		return dps;
 	}
 
 }
