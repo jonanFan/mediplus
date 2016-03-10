@@ -169,7 +169,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		floatingActionButton.setLayoutParams(params);
 		floatingActionButton.setClickable(true);
 		floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.plus,context.getTheme()));
-
+		floatingActionButton.setBackgroundTintList(getResources().getColorStateList(R.color.azul));
 		relativeLayout.addView(floatingActionButton);
 
 		addView(relativeLayout);
