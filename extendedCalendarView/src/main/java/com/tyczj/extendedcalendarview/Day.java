@@ -84,7 +84,7 @@ public class Day{
 		return startDay;
 	}
 	
-	public int getNumOfEvenets(){
+	public int getNumOfEvents(){
 		return events.size();
 	}
 	

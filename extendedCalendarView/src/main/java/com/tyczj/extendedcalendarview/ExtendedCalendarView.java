@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
@@ -70,15 +71,15 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		cal = Calendar.getInstance();
 		base = new RelativeLayout(context);
 		LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		params.topMargin = 50;
+		//params.topMargin = getpixels(2);
 		base.setLayoutParams(params);
-		base.setMinimumHeight(50);
+		base.setMinimumHeight(getpixels(50));
 		
 		base.setId(4);
 		
 		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		params.leftMargin = 16;
-		params.topMargin = 50;
+		params.leftMargin = getpixels(16);
+		params.topMargin = getpixels(20);
 		params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 		params.addRule(RelativeLayout.CENTER_VERTICAL);
 		prev = new ImageView(context);
@@ -101,8 +102,8 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		base.addView(month);
 		
 		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		params.rightMargin = 16;
-		params.topMargin = 50;
+		params.rightMargin = getpixels(16);
+		params.topMargin = getpixels(20);
 		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 		params.addRule(RelativeLayout.CENTER_VERTICAL);
 		next = new ImageView(context);
@@ -142,6 +143,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		
 		addView(calendar);
 
+		//TODO APAÑO PARA VISUALIZAR LOS EVENTOS
 		params = new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
 		params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
 		params.addRule(RelativeLayout.BELOW, calendar.getId());
@@ -153,25 +155,9 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		linearLayout.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 		linearLayout.setOrientation(LinearLayout.VERTICAL);
 
-		linearLayout.setId(R.id.scroll);
+		linearLayout.setId(R.id.scroll); //TODO ACCESIBLE AL RESTO DE CLASES A TRAVES DEL IDS.xml
 		scrollView.addView(linearLayout);//TODO HACER QUE EL SCROLL SE QUEDE ARRIBA
 		addView(scrollView);
-
-		/*RelativeLayout relativeLayout=new RelativeLayout(context);
-		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		params.topMargin = getpixels(dps-10);
-		params.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-		relativeLayout.setLayoutParams(params);
-
-		FloatingActionButton floatingActionButton=new FloatingActionButton(context);
-		params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
-		floatingActionButton.setLayoutParams(params);
-		floatingActionButton.setClickable(true);
-		floatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.plus,context.getTheme()));
-		floatingActionButton.setBackgroundTintList(getResources().getColorStateList(R.color.azul));
-		relativeLayout.addView(floatingActionButton);
-
-		addView(relativeLayout);*/
 
 	}
 
@@ -256,7 +242,7 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		if(cal.get(Calendar.MONTH) == cal.getActualMaximum(Calendar.MONTH)) {				
 			cal.set((cal.get(Calendar.YEAR)+1), cal.getActualMinimum(Calendar.MONTH),1);
 		} else {
-			cal.set(Calendar.MONTH,cal.get(Calendar.MONTH)+1);
+			cal.set(Calendar.MONTH, cal.get(Calendar.MONTH) + 1);
 		}
 		rebuildCalendar();
 	}
@@ -278,6 +264,28 @@ public class ExtendedCalendarView extends RelativeLayout implements OnItemClickL
 		mAdapter = new CalendarAdapter(context,cal);
 		calendar.setAdapter(mAdapter);
 	}
+
+	public Day getDayAfterEventDelete(int position){
+		linearLayout.removeAllViews();
+		mAdapter.refreshDays();
+		mAdapter.notifyDataSetChanged();
+		mAdapter = new CalendarAdapter(context,cal);
+		calendar.setAdapter(mAdapter);
+        try {
+            Thread.sleep(150);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return (Day)mAdapter.getItem(position);
+	}
+
+    public Day getTodayDay(){
+        return (Day)mAdapter.getItem(mAdapter.getToday());
+    }
+
+    public int getTodayPosition(){
+        return mAdapter.getToday();
+    }
 	
 	/**
 	 * 

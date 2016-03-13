@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import android.content.Context;
 import android.text.format.Time;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class CalendarAdapter extends BaseAdapter {
     static final int FIRST_DAY_OF_WEEK = 1; //Estaba a 1
     Context context;
     Calendar cal;
+    int today=-1;
     public String[] days;
 //	OnAddNewEventClick mAddEvent;
 
@@ -53,8 +55,6 @@ public class CalendarAdapter extends BaseAdapter {
     public int getPrevMonth() {
         if (cal.get(Calendar.MONTH) == cal.getActualMinimum(Calendar.MONTH)) {
             cal.set(Calendar.YEAR, cal.get(Calendar.YEAR - 1));
-        } else {
-
         }
         int month = cal.get(Calendar.MONTH);
         if (month == 0) {
@@ -99,6 +99,7 @@ public class CalendarAdapter extends BaseAdapter {
             Calendar cal = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault());
             Day d = dayList.get(position);
             if (d.getYear() == cal.get(Calendar.YEAR) && d.getMonth() == cal.get(Calendar.MONTH) && d.getDay() == cal.get(Calendar.DAY_OF_MONTH)) {
+                this.today=position;
                 today.setVisibility(View.VISIBLE);
             } else {
                 today.setVisibility(View.GONE);
@@ -127,7 +128,7 @@ public class CalendarAdapter extends BaseAdapter {
 
             Day day = dayList.get(position);
 
-            if (day.getNumOfEvenets() > 0) {
+            if (day.getNumOfEvents() > 0) {
                 Set<Integer> colors = day.getColors();
 
                 iv.setVisibility(View.INVISIBLE);
@@ -241,7 +242,11 @@ public class CalendarAdapter extends BaseAdapter {
         }
     }
 
-//	public abstract static class OnAddNewEventClick{
+    public int getToday(){
+        return this.today;
+    }
+
+    //	public abstract static class OnAddNewEventClick{
 //		public abstract void onAddNewEventClick();
 //	}
 
