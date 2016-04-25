@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/backgroundDialog">
+
+    <!-- DIAS SEMANA -->
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/vistaSemana"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/elegirSemanaTV"
+            android:text="@string/eligeDiasSemana"
+            style="@style/big_text_view" />
+        <CheckedTextView
+            android:id="@+id/lunes"
+            android:text="@string/monday"
+            style="@style/checked_text_view"
+            />
+        <CheckedTextView
+            android:id="@+id/martes"
+            android:text="@string/tuesday"
+            style="@style/checked_text_view"
+            />
+        <CheckedTextView
+            android:id="@+id/miercoles"
+            android:text="@string/wednesday"
+            style="@style/checked_text_view"
+            />
+        <CheckedTextView
+            android:id="@+id/jueves"
+            android:text="@string/thursday"
+            style="@style/checked_text_view"
+            />
+        <CheckedTextView
+            android:id="@+id/viernes"
+            android:text="@string/friday"
+            style="@style/checked_text_view"
+            />
+        <CheckedTextView
+            android:id="@+id/sabado"
+            android:text="@string/saturday"
+            style="@style/checked_text_view"
+            />
+        <CheckedTextView
+            android:id="@+id/domingo"
+            android:text="@string/sunday"
+            style="@style/checked_text_view"
+        />
+    </LinearLayout>
+
+    <!-- HORA INICIAL + FRECUENCIA -->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/vistaDia"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/frecuenciaHoraria"
+            android:hint="@string/frecuenciaHoraria"
+            style="@style/edit_text_mini" />
+        <TimePicker
+            android:id="@+id/horaInicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <!-- BOTONES -->
+    <LinearLayout
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:onClick="cancelar"
+            android:text="@string/cancelar"
+            android:layout_weight="1"
+            style="@style/button_text" />
+        <Button
+            android:onClick="guardar"
+            android:text="@string/guardar"
+            android:layout_weight="1"
+            style="@style/button_text" />
+    </LinearLayout>
+</LinearLayout>

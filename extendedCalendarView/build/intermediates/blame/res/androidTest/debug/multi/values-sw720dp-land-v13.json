@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+        "outputFile": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 93
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 141
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 236
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values-sw720dp-land-v13/values-sw720dp-land-v13.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,

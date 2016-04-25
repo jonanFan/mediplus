@@ -1,0 +1,27 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/boxText"
+        style="@style/title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:id="@+id/boxTable"
+            android:layout_margin="@dimen/borderMargins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TableLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -3,8 +3,8 @@
     package="com.tyczj.extendedcalendarview.test" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
@@ -15,7 +15,6 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <uses-library android:name="android.test.runner" />

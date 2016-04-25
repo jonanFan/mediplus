@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "outputFile": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 92
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 140
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 233
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 282
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -102,17 +102,17 @@
                     "startLine": 7,
                     "startColumn": 4,
                     "startOffset": 287,
-                    "endColumn": 57,
-                    "endOffset": 340
+                    "endColumn": 35,
+                    "endOffset": 318
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
                         "startOffset": 287,
-                        "endColumn": 57,
-                        "endOffset": 340
+                        "endColumn": 35,
+                        "endOffset": 318
                     }
                 }
             },
@@ -120,18 +120,18 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 345,
-                    "endColumn": 38,
-                    "endOffset": 379
+                    "startOffset": 323,
+                    "endColumn": 57,
+                    "endOffset": 376
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 345,
-                        "endColumn": 38,
-                        "endOffset": 379
+                        "startOffset": 323,
+                        "endColumn": 57,
+                        "endOffset": 376
                     }
                 }
             },
@@ -139,18 +139,18 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 384,
-                    "endColumn": 38,
-                    "endOffset": 418
+                    "startOffset": 381,
+                    "endColumn": 35,
+                    "endOffset": 412
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 384,
-                        "endColumn": 38,
-                        "endOffset": 418
+                        "startOffset": 381,
+                        "endColumn": 35,
+                        "endOffset": 412
                     }
                 }
             },
@@ -158,18 +158,18 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 423,
-                    "endColumn": 40,
-                    "endOffset": 459
+                    "startOffset": 417,
+                    "endColumn": 35,
+                    "endOffset": 448
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 423,
-                        "endColumn": 40,
-                        "endOffset": 459
+                        "startOffset": 417,
+                        "endColumn": 35,
+                        "endOffset": 448
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 464,
-                    "endColumn": 38,
-                    "endOffset": 498
+                    "startOffset": 453,
+                    "endColumn": 35,
+                    "endOffset": 484
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 464,
-                        "endColumn": 38,
-                        "endOffset": 498
+                        "startOffset": 453,
+                        "endColumn": 35,
+                        "endOffset": 484
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 503,
-                    "endColumn": 40,
-                    "endOffset": 539
+                    "startOffset": 489,
+                    "endColumn": 35,
+                    "endOffset": 520
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 503,
-                        "endColumn": 40,
-                        "endOffset": 539
+                        "startOffset": 489,
+                        "endColumn": 35,
+                        "endOffset": 520
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 544,
-                    "endColumn": 39,
-                    "endOffset": 579
+                    "startOffset": 525,
+                    "endColumn": 35,
+                    "endOffset": 556
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 544,
-                        "endColumn": 39,
-                        "endOffset": 579
+                        "startOffset": 525,
+                        "endColumn": 35,
+                        "endOffset": 556
                     }
                 }
             },
@@ -234,18 +234,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 584,
-                    "endColumn": 41,
-                    "endOffset": 621
+                    "startOffset": 561,
+                    "endColumn": 35,
+                    "endOffset": 592
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 584,
-                        "endColumn": 41,
-                        "endOffset": 621
+                        "startOffset": 561,
+                        "endColumn": 35,
+                        "endOffset": 592
                     }
                 }
             },
@@ -253,41 +253,60 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 626,
-                    "endLine": 21,
-                    "endColumn": 12,
-                    "endOffset": 912
+                    "startOffset": 597,
+                    "endColumn": 35,
+                    "endOffset": 628
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 626,
-                        "endLine": 21,
-                        "endColumn": 12,
-                        "endOffset": 912
+                        "startOffset": 597,
+                        "endColumn": 35,
+                        "endOffset": 628
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 917,
-                    "endLine": 24,
+                    "startOffset": 633,
+                    "endLine": 22,
                     "endColumn": 12,
-                    "endOffset": 1072
+                    "endOffset": 919
                 },
                 "from": {
-                    "file": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
                     "position": {
-                        "startLine": 22,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 917,
-                        "endLine": 24,
+                        "startOffset": 633,
+                        "endLine": 22,
                         "endColumn": 12,
-                        "endOffset": 1072
+                        "endOffset": 919
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 924,
+                    "endLine": 25,
+                    "endColumn": 12,
+                    "endOffset": 1079
+                },
+                "from": {
+                    "file": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 924,
+                        "endLine": 25,
+                        "endColumn": 12,
+                        "endOffset": 1079
                     }
                 }
             }

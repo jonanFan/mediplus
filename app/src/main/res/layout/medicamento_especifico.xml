@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/background">
+
+    <TextView
+        android:text="@string/medicamentos"
+        style="@style/title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5sp"
+            android:stretchColumns="*"
+            android:shrinkColumns="*">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/nombreTV"
+                    android:text="@string/nombre"
+                    style="@style/text_view"/>
+                <EditText
+                    android:id="@+id/nombreET"
+                    style="@style/edit_text_mini"/>
+
+            </TableRow>
+
+            <TableRow>
+                <!-- trampita para que no salga el teclado y no tenga que hacer click 2 veces -->
+                <TextView
+                    android:id="@+id/inicioTV"
+                    android:text="@string/inicio"
+                    style="@style/text_view"/>
+                <Button
+                    android:id="@+id/inicioET"
+                    android:onClick="onClick"
+                    style="@style/edit_text_mini"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/finTV"
+                    android:text="@string/fin"
+                    style="@style/text_view"/>
+                <Button
+                    android:id="@+id/finET"
+                    android:onClick="onClick"
+                    style="@style/edit_text_mini"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/diasTomaTV"
+                    android:text="@string/diasToma"
+                    style="@style/text_view"/>
+                <Button
+                    android:id="@+id/diasTomaET"
+                    android:onClick="onClick"
+                    style="@style/edit_text_mini"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/horasTomaTV"
+                    android:text="@string/horasToma"
+                    style="@style/text_view"/>
+                <Button
+                    android:id="@+id/horasTomaET"
+                    android:onClick="onClick"
+                    style="@style/edit_text_mini"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/cantidadCompraTV"
+                    android:text="@string/cantidadCompra"
+                    style="@style/text_view"/>
+                <EditText
+                    android:id="@+id/cantidadCompraET"
+                    style="@style/edit_text_mini"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/fechaProximaCompraTV"
+                    android:text="@string/fechaProximaCompra"
+                    style="@style/text_view"/>
+                <Button
+                    android:id="@+id/fechaProximaCompraET"
+                    android:onClick="onClick"
+                    style="@style/edit_text_mini"/>
+            </TableRow>
+
+            <Button
+                android:id="@+id/bAnadirMedicamento"
+                android:text="@string/bNuevoMedicamento"
+                android:onClick="volver"
+                style="@style/button_text"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/bEliminarMedicamento"
+                    android:text="@string/beliminarMedicamento"
+                    android:onClick="volver"
+                    style="@style/button_text"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+                <Button
+                    android:id="@+id/bEditarMedicamento"
+                    android:text="@string/beditarMedicamento"
+                    android:onClick="volver"
+                    style="@style/button_text"
+                    android:layout_weight="1"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/background">
+
+    <TextView
+        android:text="@string/medicamentos"
+        style="@style/title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:id="@+id/tablaMedicamentos"
+            android:layout_margin="@dimen/borderMargins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TableLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:visibility="invisible"
+        android:text="@string/error"
+        android:id="@+id/check"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bNuevoMedicamento"
+        android:text="@string/bNuevoMedicamento"
+        android:onClick="anadirMedicamento"
+        style="@style/button_text" />
+
+</LinearLayout>

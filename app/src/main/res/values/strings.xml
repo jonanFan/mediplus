@@ -1,3 +1,106 @@
 <resources>
-    <string name="app_name">pruebacalen</string>
+    <string name="app_name">Mediplus</string>
+    <string name="mysqlUser">mediplus</string>
+    <string name="mysqlPwd">mediplus</string>
+    <string name="mysqlHost">46.101.253.81</string>
+    <string name="mysqlPort">3306</string>
+    <string name="nombreTablaClientes">Clientes</string>
+    <string name="nombreTablaMedicamentos">Medicamentos</string>
+
+    <string name="loging">Pantalla de inicio</string>
+    <string name="bLoging">Iniciar Sesión</string>
+    <string name="bRegistro">Registrarse</string>
+    <string name="conectando">Conectando...</string>
+
+    <string name="menu">Menú</string>
+    <string name="bCalendario">Calendario</string>
+    <string name="bMedicamentos">Medicamentos</string>
+    <string name="bAjustes">Ajustes</string>
+    <string name="bDesconexion">Desconexión</string>
+
+    <string name="registro">Registro</string>
+
+    <string name="calendario">Calendario</string>
+
+    <string name="medicamentos">Medicamentos</string>
+    <string name="bNuevoMedicamento">Añadir Medicamento</string>
+    <string name="banadirMedicamento">Añadir</string>
+    <string name="beditarMedicamento">Guardar</string>
+    <string name="beliminarMedicamento">Eliminar</string>
+
+    <string name="nuevoMedicamentos">Medicamento específico</string>
+    <string name="nombre">Nombre: </string>
+    <string name="inicio">Dia inicial: </string>
+    <string name="fin">Dia final: </string>
+    <string name="diasToma">Dias: </string>
+    <string name="horasToma">Horas: </string>
+    <string name="cantidadCompra">Cantidad compra: </string>
+    <string name="fechaProximaCompra">Reposición: </string>
+
+    <string name="yes">sí</string>
+    <string name="no">no</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eligeDiasSemana">Elige días:</string>
+    <string name="frecuenciaHoraria">¿Cada cuantas horas?</string>
+
+
+    <string name="ajustes">Ajustes</string>
+    <string name="correo">Introducir Correo Electronico</string>
+    <string name="contrasena">Introducir Contraseña</string>
+
+    <string name="error">ERROR</string>
+
+    <string name="nombreMedicamento">Nombre: </string>
+    <string name="diaInicio">Dia inicial: </string>
+    <string name="diaFin">Dia final: </string>
+
+    <string name="intcorreo">Introducir correo electronico</string>
+    <string name="intdatos">Introduzca sus datos</string>
+
+    <string name="apellido1">Primer apellido</string>
+    <string name="apellido2">Segundo apellido</string>
+    <string name="telefono">Numero de telefono</string>
+    <string name="pwdAdmin">Contraseña administrador</string>
+    <string name="pwdPaciente">Contraseña paciente</string>
+    <string name="pwdFamiliar">Contraseña familiar</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dialogos">Dialogos</string>
+
+    <string name="cita">Nueva cita</string>
+    <string name="inicioF">Fecha inicio: </string>
+    <string name="finF">Fecha final: </string>
+    <string name="lugar">Lugar: </string>
+    <string name="descripcion">Descripcion: </string>
+    <string name="añadirCita">Añadir cita</string>
+    <string name="tituloFecha">Seleccionar fecha</string>
+    <string name="aceptar">Aceptar</string>
+
+    <string name="monday">Lunes</string>
+    <string name="tuesday">Martes</string>
+    <string name="wednesday">Miércoles</string>
+    <string name="thursday">Jueves</string>
+    <string name="friday">Viernes</string>
+    <string name="saturday">Sábado</string>
+    <string name="sunday">Domingo</string>
+
+    <string name="title_activity_casilla_especifica">CasillaEspecifica</string>
+
+    <!--De inigo, reminders y tal-->
+
+    <!--<string name="button_set_notif_med">medicina</string>-->
+    <!--<string name="button_set_notif_cita">Cancelar medicina</string>-->
+    <string name="button_done">ya esta</string>
+    <string name="button_postpone">ahora voy</string>
+    <string name="button_not_wanna">no quiero</string>
+    <string name="activity_reminder_med_info">Aquí va la info del medicamento</string>
+    <string name="activity_reminder_med_second_info">Aquí te explico que si no te la tomas te vas a morir, que ya estás cascadillo vejete</string>
+    <string name="activity_reminder_med_third_info">Aquí te pongo a lo loco cuando va a ser la próxima vez que tienes que tomarlo (pero así, de jartada)</string>
+    <string name="med_taken">Oso ondo txapeldun!</string>
+    <string name="med_postponed">La vas a liar...</string>
+    <string name="med_cancelled">Si no la tomas, arderás en el infierno</string>
+    <string name="cite_gone">Oso ondo txapeldun!</string>
+    <string name="cite_postponed">Mira que vas a llegar tarde...</string>
+    <string name="cite_cancelled">Si no vas, arderás en el infierno</string>
 </resources>

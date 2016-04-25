@@ -1,10 +1,10 @@
 [
     {
-        "merged": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/layout/day_of_week.xml",
-        "source": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/layout/day_of_week.xml"
+        "merged": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/layout/day_view.xml",
+        "source": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/layout/day_view.xml"
     },
     {
-        "merged": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/layout/day_view.xml",
-        "source": "/home/jon/Dropbox/TAP_MEDI+/pruebacalen/extendedCalendarView/build/intermediates/bundles/debug/res/layout/day_view.xml"
+        "merged": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/res/merged/androidTest/debug/layout/day_of_week.xml",
+        "source": "/home/jon/Escritorio/Mediplus/extendedCalendarView/build/intermediates/bundles/debug/res/layout/day_of_week.xml"
     }
 ]

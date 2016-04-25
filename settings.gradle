@@ -1,0 +1,4 @@
+include ':app', ':google-api-services-drive-v2-rev212-1.21.0', ':jsch-0.1.44'
+include ':mysql-connector-java-3.1.14-bin'
+include ':extendedCalendarView'
+

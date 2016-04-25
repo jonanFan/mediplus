@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:text="@string/registro"
+            style="@style/title" />
+
+        <TextView
+            android:text="@string/intdatos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/editTextR1"
+            android:hint="@string/nombre"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            style="@style/edit_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editTextR2"
+            android:hint="@string/apellido1"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editTextR3"
+            android:hint="@string/apellido2"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editTextR4"
+            android:hint="@string/telefono"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editTextR5"
+            android:hint="@string/pwdAdmin"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editTextR6"
+            android:hint="@string/pwdPaciente"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text"/>
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/editTextR7"
+            android:hint="@string/pwdFamiliar"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/editTextR8"
+            android:hint="@string/correo"
+            android:onClick="chooseAccount"
+            android:layout_above="@+id/editText2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            style="@style/edit_text"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/bRegistrar"
+            android:text="@string/bRegistro"
+            android:onClick="registro"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            style="@style/button_text" />
+
+
+    </LinearLayout>
+
+</ScrollView>

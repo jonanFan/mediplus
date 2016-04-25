@@ -1,36 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.alumno.pruebacalen" >
+    package="es.mediplus.mediplus" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!--inigo, para vibrar al poner alarmas-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!--inigo, para poner alarmas al encender el tfno-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!--inigo para llamar al jefe-->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
-        tools:replace="android:icon,android:label"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Google Calendar API Android Quickstart"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="Google Calendar API Android Quickstart" >
+            android:name=".Inicio"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoDisplay"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Loging"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.LOGING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.MENU" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Registro"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.REGISTRO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CalendarioVista"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.CALENDARIO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NuevoEvento"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.example.alumno.pruebacalen.NUEVOEVENTO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Medicamentos"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.MEDICAMENTOS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MedicamentoEspecifico"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.MEDICAMENTOESPECIFICO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ajustes"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="es.mediplus.mediplus.AJUSTES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Dialogos"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_dialogos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MyDialogTheme" >
+        </activity>
+
+        <!--inigo, para reminders-->
+        <activity android:name=".ReminderMedActivity"
+            android:showOnLockScreen="true"
+            android:excludeFromRecents="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <!--TODO: mirar si este showOnLockScreen de encima esta bien
+            lo copio de http://stackoverflow.com/questions/3629179/android-activity-over-default-lock-screen-->
+        </activity>
+
 
         <provider
-            android:permission="signature"
             android:name="com.tyczj.extendedcalendarview.CalendarProvider"
-            android:authorities="com.tyczj.extendedcalendarview.calendarprovider" />
+            android:authorities="com.tyczj.extendedcalendarview.calendarprovider"
+            android:permission="signature" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name=".BBDD"
+            android:authorities="es.mediplus.mediplus.BBDD" />
+
+        <!--inigo: la clase que recibe el aviso de boot completed-->
+        <!--TODO: inigo: le pongo activado siempre, si hay tiempo lo activamos/desactivamos dinamicamente-->
+        <receiver android:name=".ReminderBootActivator"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
     </application>
+
 </manifest>

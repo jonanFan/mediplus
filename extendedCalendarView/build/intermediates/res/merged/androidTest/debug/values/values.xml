@@ -5,14 +5,15 @@
     <dimen name="min_cell_height">50dp</dimen>
     <dimen name="min_cell_width">50dp</dimen>
     <dimen name="text_height_width">30dp</dimen>
+    <item name="scroll" type="id"/>
     <string name="app_name">ExtendedCalendarView</string>
-    <string name="friday">VIE</string>
-    <string name="monday">LUN</string>
-    <string name="saturday">SAB</string>
-    <string name="sunday">DOM</string>
-    <string name="thursday">JUE</string>
-    <string name="tuesday">MAR</string>
-    <string name="wednesday">MIE</string>
+    <string name="fri">VIE</string>
+    <string name="mon">LUN</string>
+    <string name="sat">SAB</string>
+    <string name="sun">DOM</string>
+    <string name="thu">JUE</string>
+    <string name="tue">MAR</string>
+    <string name="wed">MIE</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in

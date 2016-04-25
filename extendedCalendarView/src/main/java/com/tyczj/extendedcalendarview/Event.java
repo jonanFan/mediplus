@@ -16,7 +16,9 @@ public class Event {
 	private long end;
 	private Bitmap image;
 	private long eventId;
-	
+	private String googleId;
+	private int flag;
+
 	public static final int DEFAULT_EVENT_ICON = 0;
 	public static final int COLOR_RED = 1;
 	public static final int COLOR_BLUE = 2;
@@ -29,7 +31,23 @@ public class Event {
 		this.start = startMills;
 		this.end = endMills;
 	}
-	
+
+	public void setGoogleId(String googleId) {
+		this.googleId = googleId;
+	}
+
+	public String getGoogleId() {
+		return googleId;
+	}
+
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+
+	public int getFlag() {
+		return flag;
+	}
+
 	public int getColor(){
 		return color;
 	}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/background">
+
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/calendario"
+                style="@style/text_menu"/>
+            <Button
+                android:id="@+id/bCalendario"
+                android:onClick="goCalendario"
+                android:background="@drawable/calendario"
+                style="@style/button_menu"/>
+            <TextView
+                android:text="@string/ajustes"
+                style="@style/text_menu"/>
+            <Button
+                android:id="@+id/bAjustes"
+                android:onClick="goAjustes"
+                android:background="@drawable/ajustes"
+                style="@style/button_menu"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/medicamentos"
+                style="@style/text_menu"/>
+            <Button
+                android:id="@+id/bMedicamentos"
+                android:onClick="goMedicamentos"
+                android:background="@drawable/medicamento"
+                style="@style/button_menu"/>
+            <TextView
+                android:text="@string/bDesconexion"
+                style="@style/text_menu"/>
+            <Button
+                android:id="@+id/bDesconexion"
+                android:onClick="returnLoging"
+                android:background="@drawable/apagar"
+                style="@style/button_menu"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

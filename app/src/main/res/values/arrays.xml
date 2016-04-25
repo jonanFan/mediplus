@@ -1,0 +1,15 @@
+<resources>
+
+    <string-array name="formTiempo">
+        <item>Dias</item>
+        <item>Horas</item>
+        <item>Minutos</item>
+    </string-array>
+
+    <string-array name="formTiempoValores">
+        <item>d</item>
+        <item>h</item>
+        <item>m</item>
+    </string-array>
+
+</resources>

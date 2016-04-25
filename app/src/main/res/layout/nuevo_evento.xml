@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:weightSum="1">
+
+    <TextView
+        android:text="@string/cita"
+        style="@style/title"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5sp"
+        android:stretchColumns="*"
+        android:shrinkColumns="1">
+
+        <TableRow>
+            <TextView
+                android:text="@string/nombre"
+                style="@style/text_view"
+				android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/nombreEven"
+                android:inputType="text"
+                style="@style/edit_text_mini"/>
+
+        </TableRow>
+
+        <TableRow>
+            <!-- trampita para que no salga el teclado y no tenga que hacer click 2 veces -->
+            <TextView
+                android:text="@string/inicioF"
+                style="@style/text_view"
+				android:layout_gravity="center_vertical" />
+            <Button
+                android:id="@+id/inicioEven"
+                android:onClick="introducirFecha"
+                style="@style/edit_text_mini"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/finF"
+                style="@style/text_view"
+				android:layout_gravity="center_vertical" />
+            <Button
+                android:id="@+id/finEven"
+                android:onClick="introducirFecha"
+                style="@style/edit_text_mini"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/lugar"
+                style="@style/text_view"
+				android:layout_gravity="center_vertical" />
+            <EditText
+                android:id="@+id/lugarEven"
+                android:inputType="text"
+                style="@style/edit_text_mini"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="@string/descripcion"
+                style="@style/text_view"
+				android:layout_gravity="center_vertical" />
+
+            <EditText
+                android:id="@+id/descripcionEven"
+                android:inputType="textMultiLine"
+                style="@style/edit_text"
+                android:layout_height="120dp" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/anadirEven"
+            android:text="@string/añadirCita"
+            android:onClick="anadirCita"
+            style="@style/button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </TableLayout>
+</LinearLayout>

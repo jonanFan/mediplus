@@ -37,7 +37,11 @@ public class CalendarProvider extends ContentProvider {
 	public static final String START_DAY = "start_day";
 	public static final String END_DAY = "end_day";
 	public static final String COLOR = "color";
-	
+	public static final String ID_GOOGLE="id_google";
+	public static final String FLAG="flag";
+
+	public static final String ELIMINAR="1";
+
 	private static final HashMap<String, String> mMap;
     private DatabaseHelper DBHelper;
     private SQLiteDatabase db;
@@ -67,9 +71,9 @@ public class CalendarProvider extends ContentProvider {
         }
         
     	private void createTables(SQLiteDatabase db){
-    		db.execSQL("CREATE TABLE " + EVENTS_TABLE + "(" + ID + " integer primary key autoincrement, " +
+    		db.execSQL("CREATE TABLE IF NOT EXISTS " + EVENTS_TABLE + "(" + ID + " integer primary key autoincrement, " +
     				EVENT + " TEXT, " + LOCATION + " TEXT, " + DESCRIPTION + " TEXT, "
-    				+ START + " INTEGER, "+ END + " INTEGER, " + START_DAY + " INTEGER, " + END_DAY + " INTEGER, " + COLOR +" INTEGER);");
+    				+ START + " INTEGER, "+ END + " INTEGER, " + START_DAY + " REAL, " + END_DAY + " REAL, " + COLOR +" INTEGER, "+ID_GOOGLE+" TEXT, "+FLAG+" INTEGER);");
     	}
     }
 
@@ -152,7 +156,7 @@ public class CalendarProvider extends ContentProvider {
 		if(num == 1){
 			count = db.update(EVENTS_TABLE, values, selection, selectionArgs);
 		}else if(num == 2){
-			count = db.update(EVENTS_TABLE, values, ID + " = " + uri.getPathSegments().get(1) + (!TextUtils.isEmpty(selection) ? " AND (" + 
+			count = db.update(EVENTS_TABLE, values, ID + " = " + uri.getPathSegments().get(1) + (!TextUtils.isEmpty(selection) ? " AND (" +
 	                  selection + ')' : ""), 
 	                  selectionArgs);
 		}else{
@@ -179,6 +183,8 @@ public class CalendarProvider extends ContentProvider {
 		mMap.put(START_DAY, START_DAY);
 		mMap.put(END_DAY, END_DAY);
 		mMap.put(COLOR, COLOR);
+		mMap.put(ID_GOOGLE, ID_GOOGLE);
+		mMap.put(FLAG, FLAG);
 	}
 
 }
